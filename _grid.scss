@@ -1,0 +1,97 @@
+.col-xs-12 {
+    flex: 0 0 100%;
+    max-width: 100%;
+}
+
+.container {
+    width: 100%;
+    padding: 0 15px;
+    margin: 0 auto;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -15px;
+}
+
+.page {
+    padding-top: 150px;
+}
+
+[class*=col-] {
+    padding: 0 15px;
+}
+
+@media (min-width: 1200px) {
+    .container {
+        max-width: 1140px;
+    }
+}
+
+@media (min-width: 992px) {
+    .container {
+        max-width: 960px;
+    }
+    @for $i from 1 through 12 {
+        .col-md-#{$i} {
+            flex: 0 0 percentage($i/12);
+            max-width: percentage($i/12);
+        }
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .container {
+        max-width: 720px;
+    }
+
+    @for $j from 1 through 12 {
+        .col-sm-#{$j} {
+            flex: 0 0 percentage($j/12);
+            max-width: percentage($j/12);
+        }
+    }
+
+    .center-xs {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .center-col-xs {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        flex-direction: column;
+    }
+
+    .page {
+        padding-top: 80px;
+    }
+}
+
+@media (max-width: 767px) {
+    .container {
+        max-width: 450px;
+    }
+
+    .center-xs {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .center-col-xs {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        flex-direction: column;
+    }
+
+    .page {
+        padding-top: 50px;
+    }
+}

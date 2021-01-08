@@ -1,0 +1,47 @@
+$fMont: 'Montserrat', sans-serif;
+$fOpenS: 'Open Sans', sans-serif;
+$gray: #60606e;
+$lgreen: #7beec7;
+
+@mixin flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin flex-col {
+    display: flex;
+    flex-direction: column;
+}
+
+@mixin flex-col-center {
+    @include flex-center;
+    flex-direction: column;
+}
+
+@mixin flex-center-vert {
+    display: flex;
+    align-items: center;
+}
+
+@mixin flex-center-horiz {
+    display: flex;
+    justify-content: center;
+}
+
+@mixin flex-end {
+    display: flex;
+    justify-content: flex-end;
+}
+
+@mixin tablet {
+    @media (min-width: 768px) and (max-width: 991px) {
+        @content;
+    }
+}
+
+@mixin mobile {
+    @media (max-width: 767px) {
+        @content;
+    }
+}
