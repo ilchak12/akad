@@ -110,6 +110,8 @@ img {
     background: white url(img/site-hero.jpg) no-repeat center;
     background-size: cover;
     margin-top: -100px;
+    position: relative;
+    z-index: 50;
 }
 
 .slides {
@@ -166,6 +168,8 @@ img {
 
 .site-history-agency {
     margin-top: -300px;
+    position: relative;
+    z-index: 100;
 }
 
 .history-pic {
