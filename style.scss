@@ -56,6 +56,9 @@ img {
 }
 
 .nav {
+    position: relative;
+    z-index: 5000;
+
     @include mobile {
         overflow-x: scroll;
     }

@@ -255,6 +255,10 @@ img {
   cursor: pointer;
 }
 
+.nav {
+  position: relative;
+  z-index: 5000;
+}
 @media (max-width: 767px) {
   .nav {
     overflow-x: scroll;
