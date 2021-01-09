@@ -13,6 +13,7 @@ body {
 }
 
 a {
+    display: block;
     color: $gray;
     text-decoration: none;
 }
@@ -60,12 +61,17 @@ img {
     }
 }
 
-.nav {
+.nav-desktop {
     position: relative;
     z-index: 5000;
 
     @include mobile {
         overflow-x: scroll;
+        @include hide-elem;
+    }
+
+    @include tablet {
+        @include hide-elem;
     }
 
     .menu {
@@ -79,8 +85,6 @@ img {
             }
 
             a {
-                display: block;
-                text-decoration: none;
                 font-family: $fMont;
                 font-weight: 700;
                 text-transform: uppercase;
@@ -111,6 +115,81 @@ img {
                     background-color: $lgreen;
                 }
             }
+        }
+    }
+}
+
+.nav-mobile {
+    position: absolute;
+    z-index: 5000;
+    top: 30px;
+    right: 0;
+    @include hide-elem;
+    transition: 0.3s;
+    transform-origin: 0 0;
+
+    .menu-mobile {
+    
+        li {
+            a {
+                padding: 0 10px;
+                background-color: $lightgray;
+                width: 150px;
+                height: 30px;
+                line-height: 30px;
+                text-align: right;
+                font-family: $fMont;
+                font-weight: 700;
+                text-transform: uppercase;
+                font-size: 12px;
+                position: relative;
+
+                &:hover {
+                    color: $lgreen;
+                    background-color: $gray;
+                }
+            }
+        }
+    }
+}
+
+.menu-burger {
+    position: relative;
+}
+
+.menu-icon {
+    position: relative;
+    z-index: 5000;
+    max-width: 30px;
+    height: 17px;
+    @include flex-col;
+    justify-content: space-between;
+    cursor: pointer;
+    @include hide-elem;
+
+    @include mobile {
+        @include show-elem;
+    }
+
+    @include tablet {
+        @include show-elem;
+    }
+
+    .line {
+        height: 1px;
+        background-color: $gray;
+        transition: all 0.3s ease-in-out;
+
+        &:first-child {
+            width: 30px;
+        }
+
+        &:nth-child(2) {
+            width: 15px;
+        }
+
+        &:last-child {
+            width: 20px;
         }
     }
 }
@@ -529,17 +608,23 @@ img {
     padding: 50px 0;
 }
 
-.nav {
-    @include mobile {
-        overflow-x: scroll;
-    }
+.nav-footer {
 
     .footer-menu {
         display: flex;
-    
+        
+        @include mobile {
+            flex-direction: column;
+        }
+
         li {
             position: relative;
             margin-right: 20px;
+
+            @include mobile {
+                margin-right: 0;
+                margin-bottom: 10px;
+            }
 
             &:last-child {
                 margin-right: 0;
@@ -553,6 +638,10 @@ img {
                 right: -13px;
                 top: 50%;
                 background-color: $gray;
+
+                @include mobile {
+                    @include hide-elem;
+                }
             }
 
             &:last-child:after {

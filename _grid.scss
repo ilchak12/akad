@@ -32,12 +32,20 @@
     .container {
         max-width: 1140px;
     }
+
+    @for $i from 1 through 12 {
+        .col-lg-#{$i} {
+            flex: 0 0 percentage($i/12);
+            max-width: percentage($i/12);
+        }
+    }
 }
 
 @media (min-width: 992px) {
     .container {
         max-width: 960px;
     }
+
     @for $i from 1 through 12 {
         .col-md-#{$i} {
             flex: 0 0 percentage($i/12);
