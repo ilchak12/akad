@@ -326,7 +326,6 @@ img {
 }
 @media (max-width: 767px) {
   .nav-desktop {
-    overflow-x: scroll;
     visibility: hidden;
     opacity: 0;
   }
