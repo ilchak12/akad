@@ -93,7 +93,7 @@
     max-width: 100%;
   }
 }
-@media (min-width: 992px) {
+@media (min-width: 992px) and (max-width: 1199px) {
   .container {
     max-width: 960px;
   }
@@ -388,13 +388,13 @@ img {
   padding: 0 10px;
   background-color: #e9e9e9;
   width: 150px;
-  height: 30px;
-  line-height: 30px;
+  height: 40px;
+  line-height: 40px;
   text-align: right;
   font-family: "Montserrat", sans-serif;
   font-weight: 700;
   text-transform: uppercase;
-  font-size: 12px;
+  font-size: 14px;
   position: relative;
 }
 .nav-mobile .menu-mobile li a:hover {
@@ -516,6 +516,7 @@ img {
 
 .history-pic img {
   max-height: 400px;
+  width: 100%;
 }
 
 .section-title {

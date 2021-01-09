@@ -134,13 +134,13 @@ img {
                 padding: 0 10px;
                 background-color: $lightgray;
                 width: 150px;
-                height: 30px;
-                line-height: 30px;
+                height: 40px;
+                line-height: 40px;
                 text-align: right;
                 font-family: $fMont;
                 font-weight: 700;
                 text-transform: uppercase;
-                font-size: 12px;
+                font-size: 14px;
                 position: relative;
 
                 &:hover {
@@ -266,6 +266,7 @@ img {
 .history-pic {
     img {
        max-height: 400px;
+       width: 100%;
     }
 }
 
