@@ -2,6 +2,7 @@ $fMont: 'Montserrat', sans-serif;
 $fOpenS: 'Open Sans', sans-serif;
 $gray: #60606e;
 $lgreen: #7beec7;
+$lightgray: #e9e9e9;
 
 @mixin flex-center {
     display: flex;
@@ -32,6 +33,11 @@ $lgreen: #7beec7;
 @mixin flex-end {
     display: flex;
     justify-content: flex-end;
+}
+
+@mixin hide-elem {
+    visibility: hidden;
+    opacity: 0;
 }
 
 @mixin tablet {

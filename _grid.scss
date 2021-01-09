@@ -3,6 +3,11 @@
     max-width: 100%;
 }
 
+.col-xs-6 {
+    flex: 0 0 50%;
+    max-width: 50%;
+}
+
 .container {
     width: 100%;
     padding: 0 15px;
@@ -16,7 +21,7 @@
 }
 
 .page {
-    padding-top: 150px;
+    margin-top: 150px;
 }
 
 [class*=col-] {
@@ -59,16 +64,16 @@
         align-items: center;
     }
 
-    .center-col-xs {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-        flex-direction: column;
-    }
+    // .center-col-xs {
+    //     display: flex;
+    //     justify-content: center;
+    //     align-items: center;
+    //     text-align: center;
+    //     flex-direction: column;
+    // }
 
     .page {
-        padding-top: 80px;
+        margin-top: 80px;
     }
 }
 
@@ -81,6 +86,7 @@
         display: flex;
         justify-content: center;
         align-items: center;
+        text-align: center;
     }
 
     .center-col-xs {
@@ -92,6 +98,6 @@
     }
 
     .page {
-        padding-top: 50px;
+        margin-top: 50px;
     }
 }
