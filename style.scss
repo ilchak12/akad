@@ -733,6 +733,7 @@ h3 {
     width: 100%;
     margin-top: -100px;
     padding-top: 100px;
+    text-align: center;
 }
 
 .page-title {
@@ -917,4 +918,79 @@ h3 {
     border: 1px solid $lightgray;
     @include flex-center;
     margin-bottom: 30px;
+}
+
+/*======================================================*/
+/*======================================================*/
+/*SERVICES HTML*/
+/*======================================================*/
+/*======================================================*/
+
+/*WHAT WE DO*/
+
+.services-side {
+    .services-side-desc {
+        margin-bottom: 50px;
+
+        p {
+            line-height: 25px;
+        }
+    }
+}
+
+.services-side-items {
+    .item {
+        @include flex-center-vert;
+        margin-bottom: 20px;
+
+        i {
+            color: $lgreen;
+        }
+
+        p {
+            margin-left: 10px;
+        }
+    }
+}
+
+/*BENEFITS*/
+.benefits {
+    .col-xs-12 {
+        &:last-child {
+            .benefit-service-block {
+                margin-bottom: 0;
+            }
+        }
+    }
+}
+
+.benefit-service-block {
+    @include flex-col-center;
+    text-align: center;
+
+    @include mobile {
+        margin-bottom: 30px;
+    }
+
+    @include tablet {
+        margin-bottom: 30px;
+    }
+
+    .section-title {
+        h2 {
+            font-size: 36px;
+
+            &:after {
+                width: 50px;
+            }
+        }
+    }
+
+    .section-subtitle {
+        padding-bottom: 20px;
+    }
+
+    p {
+        line-height: 25px;
+    }
 }

@@ -229,6 +229,12 @@
     align-items: center;
   }
 
+  .center-sm {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
   .page {
     margin-top: 80px;
   }
@@ -964,6 +970,7 @@ h3 {
   width: 100%;
   margin-top: -100px;
   padding-top: 100px;
+  text-align: center;
 }
 
 .page-title .page-name h2 {
@@ -1149,6 +1156,66 @@ h3 {
   justify-content: center;
   align-items: center;
   margin-bottom: 30px;
+}
+
+/*======================================================*/
+/*======================================================*/
+/*SERVICES HTML*/
+/*======================================================*/
+/*======================================================*/
+/*WHAT WE DO*/
+.services-side .services-side-desc {
+  margin-bottom: 50px;
+}
+.services-side .services-side-desc p {
+  line-height: 25px;
+}
+
+.services-side-items .item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.services-side-items .item i {
+  color: #7beec7;
+}
+.services-side-items .item p {
+  margin-left: 10px;
+}
+
+/*BENEFITS*/
+.benefits .col-xs-12:last-child .benefit-service-block {
+  margin-bottom: 0;
+}
+
+.benefit-service-block {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+}
+@media (max-width: 767px) {
+  .benefit-service-block {
+    margin-bottom: 30px;
+  }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  .benefit-service-block {
+    margin-bottom: 30px;
+  }
+}
+.benefit-service-block .section-title h2 {
+  font-size: 36px;
+}
+.benefit-service-block .section-title h2:after {
+  width: 50px;
+}
+.benefit-service-block .section-subtitle {
+  padding-bottom: 20px;
+}
+.benefit-service-block p {
+  line-height: 25px;
 }
 
 /*# sourceMappingURL=style.css.map */
