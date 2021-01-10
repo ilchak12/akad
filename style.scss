@@ -23,6 +23,20 @@ img {
     max-width: 100%
 }
 
+h1, h2, h3, h4, h5, h6 {
+    text-transform: uppercase;
+    font-family: $fMont;
+    font-weight: bold;
+}
+
+h2 {
+    font-size: 30px;
+}
+
+h3 {
+    font-size: 18px;
+}
+
 .flex-center {
     @include flex-center;
 }
@@ -33,6 +47,10 @@ img {
 
 .flex-center-vert {
     @include flex-center-vert;
+}
+
+.flex-col-center {
+    @include flex-col-center;
 }
 
 .flex-end {
@@ -697,4 +715,206 @@ img {
             color: $lgreen;
         }
     }
+}
+
+/*======================================================*/
+/*======================================================*/
+/*ABOUT HTML*/
+/*======================================================*/
+/*======================================================*/
+
+/*TOP*/
+.top {
+    height: 500px;
+    background: white url(img/site-top.png) no-repeat center;
+    background-size: cover;
+    position: relative;
+    z-index: 50;
+    width: 100%;
+    margin-top: -100px;
+    padding-top: 100px;
+}
+
+.page-title {
+    .page-name {
+        h2 {
+            font-size: 36px;
+            margin-bottom: 30px;
+        }
+    }
+}
+
+/*ABOUT US and WHAT WE DO*/
+.section-subtitle {
+    padding-bottom: 30px;
+
+    h4 {
+        font-family: $fOpenS;
+        font-weight: 900;
+    }
+}
+
+.section-content {
+    p {
+        line-height: 25px;
+    }
+}
+
+.what-we-do-side {
+    @include mobile {
+        margin-top: 50px;
+    }
+}
+
+/*SOME BENEFITS*/
+.benefit-block {
+    margin-bottom: 50px;
+
+    .benefit-title {
+        @include flex-center-vert;
+        margin-bottom: 20px;
+    
+        .benefit-icon {
+            background-color: $lgreen;
+            color: white;
+            width: 40px;
+            height: 40px;
+            @include flex-center;
+            margin-right: 20px;
+        }
+    }
+    
+    .benefit-desc {
+        p {
+            line-height: 25px;
+        }
+    }
+}
+
+/*THE DREAM TEAM*/
+.dream-team {
+    margin-top: 100px;
+
+    @include mobile {
+        margin-top: 0;
+    }
+
+    @include tablet {
+        margin-top: 30px;
+    }
+}
+
+.team-person {
+    margin-bottom: 30px;
+    position: relative;
+
+    img {
+        width: 100%;
+    }
+
+    &:hover .team-desc {
+        @include show-elem;
+        transform: scaleY(1)
+    }
+
+    .team-desc {
+        @include flex-center;
+        @include hide-elem;
+        position: absolute;
+        bottom: 0;
+        padding: 20px;
+        background-color: $gray;
+        text-align: center;
+        width: 100%;
+        transform-origin: 0 bottom;
+        transform: scaleY(0);
+        transition: 0.3s;
+
+        @include mobile {
+            padding: 10px;
+        }
+
+        h3 {
+            color: white;
+
+            @include mobile {
+                font-size: 14px;
+            }
+        }
+
+    }
+}
+
+.bottom-bar {
+    padding: 50px 30px;
+    background-color: rgba($color: $gray, $alpha: 0.1);
+    @include flex-center-vert;
+    justify-content: space-between;
+
+    @include mobile {
+        text-align: center;
+        flex-direction: column;
+    }
+
+    p {
+        font-style: italic;
+        font-size: 18px;
+    }
+
+    .default-btn {
+        margin-top: 0;
+
+        @include mobile {
+            margin-top: 15px;
+        }
+    }
+}
+
+/*TESTIMONIALS*/
+.testimonial-side {
+    @include flex-col-center;
+    margin-bottom: 30px;
+}
+
+.testimonial-img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-bottom: 20px;
+
+    img {
+        width: auto;
+        height: auto;
+        margin: 0 auto;
+    }
+}
+
+.testimonial-desc {
+    @include flex-col-center;
+    text-align: center;
+
+    p {
+        line-height: 25px;
+    }
+
+    .name {
+        width: 100px;
+        height: 30px;
+        margin-top: 25px;
+        background-color: $lgreen;
+        @include flex-center;
+
+        h4 {
+            color: white;
+        }
+    }
+}
+
+.client {
+    width: 100%;
+    height: 100px;
+    border: 1px solid $lightgray;
+    @include flex-center;
+    margin-bottom: 30px;
 }
