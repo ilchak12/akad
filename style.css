@@ -600,6 +600,7 @@ h3 {
   height: 50px;
   width: 33.33333%;
   max-width: 165px;
+  min-width: max-content;
   outline: none;
   cursor: pointer;
   font-family: "Montserrat", sans-serif;
@@ -1171,15 +1172,15 @@ h3 {
   line-height: 25px;
 }
 
-.services-side-items .item {
+.item {
   display: flex;
   align-items: center;
   margin-bottom: 20px;
 }
-.services-side-items .item i {
+.item i {
   color: #7beec7;
 }
-.services-side-items .item p {
+.item p {
   margin-left: 10px;
 }
 
@@ -1216,6 +1217,39 @@ h3 {
 }
 .benefit-service-block p {
   line-height: 25px;
+}
+
+/*PRICING PLANS*/
+.paid-plan {
+  width: 100%;
+  border-top: 5px solid #7beec7;
+  background: linear-gradient(225deg, transparent 10px, white 0), linear-gradient(45deg, transparent 10px, #7beec7 0);
+  padding: 30px 30px 40px;
+  margin-bottom: 30px;
+}
+@media (max-width: 767px) {
+  .paid-plan {
+    max-width: 340px;
+    margin: 0 auto;
+  }
+}
+.paid-plan:hover {
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.3);
+}
+.paid-plan .paid-plan-title .price {
+  margin-top: 15px;
+  padding: 10px 20px;
+  background-color: #7beec7;
+  width: max-content;
+}
+.paid-plan .paid-plan-title .price h4 {
+  color: white;
+}
+.paid-plan .paid-plan-desc {
+  margin-top: 50px;
+}
+.paid-plan .paid-plan-desc .default-btn {
+  width: 135px;
 }
 
 /*# sourceMappingURL=style.css.map */

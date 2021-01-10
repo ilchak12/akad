@@ -344,6 +344,7 @@ h3 {
     height: 50px;
     width: 33.33333%;
     max-width: 165px;
+    min-width: max-content;
     outline: none;
     cursor: pointer;
     font-family: $fMont;
@@ -938,18 +939,16 @@ h3 {
     }
 }
 
-.services-side-items {
-    .item {
-        @include flex-center-vert;
-        margin-bottom: 20px;
+.item {
+    @include flex-center-vert;
+    margin-bottom: 20px;
 
-        i {
-            color: $lgreen;
-        }
+    i {
+        color: $lgreen;
+    }
 
-        p {
-            margin-left: 10px;
-        }
+    p {
+        margin-left: 10px;
     }
 }
 
@@ -992,5 +991,43 @@ h3 {
 
     p {
         line-height: 25px;
+    }
+}
+
+/*PRICING PLANS*/
+.paid-plan {
+    width: 100%;
+    border-top: 5px solid $lgreen;
+    background: linear-gradient(225deg, transparent 10px, white 0), linear-gradient(45deg, transparent 10px, $lgreen 0);
+    padding: 30px 30px 40px;
+    margin-bottom: 30px;
+
+    @include mobile {
+        max-width: 340px;
+        margin: 0 auto;
+    }
+
+    &:hover {
+        box-shadow: 0 0 30px rgba($color: #000000, $alpha: 0.3);
+    }
+
+    .paid-plan-title {
+        .price {
+            margin-top: 15px;
+            padding: 10px 20px;
+            background-color: $lgreen;
+            width: max-content;
+            h4 {
+                color: white;
+            }
+        }
+    }
+
+    .paid-plan-desc {
+        margin-top: 50px;
+
+        .default-btn {
+            width: 135px;
+        }
     }
 }
