@@ -111,13 +111,12 @@ h3 {
                 &:after {
                     content: "";
                     position: absolute;
-                    top: 50%;
+                    top: -50%;
                     left: 0;
                     width: 0;
                     height: 1px;
                     background-color: $gray;
-                    opacity: 0;
-                    transition: width 0.2s;
+                    transition: all 0.2s ease-in-out;
                 }
 
                 &:hover {
@@ -125,10 +124,7 @@ h3 {
                 }
 
                 &:hover:after {
-                    opacity: 1;
-                    top: -50%;
                     width: 50%;
-                    transition-timing-function: ease-in-out;
                     background-color: $lgreen;
                 }
             }
@@ -608,6 +604,9 @@ h3 {
                 border-right: none;
                 font-size: 12px;
                 padding-left: 20px;
+                font-family: $fMont;
+                font-weight: bold;
+                color: $gray;
 
                 &::placeholder {
                     font-weight: bold;
@@ -1001,6 +1000,7 @@ h3 {
     background: linear-gradient(225deg, transparent 10px, white 0), linear-gradient(45deg, transparent 10px, $lgreen 0);
     padding: 30px 30px 40px;
     margin-bottom: 30px;
+    transition: 0.3s;
 
     @include mobile {
         max-width: 340px;
@@ -1028,6 +1028,268 @@ h3 {
 
         .default-btn {
             width: 135px;
+        }
+    }
+}
+
+/*======================================================*/
+/*======================================================*/
+/*BLOG HTML*/
+/*======================================================*/
+/*======================================================*/
+
+/*BLOG*/
+.blog-post {
+    margin-bottom: 100px;
+    
+    @include tablet {
+        margin-bottom: 70px;
+    }
+
+    @include mobile {
+        margin-bottom: 50px;
+    }
+
+    &:last-child {
+        margin-bottom: 0;
+
+        @include tablet {
+            margin-bottom: 70px;
+        }
+
+        @include mobile {
+            margin-bottom: 50px;
+        }
+    }
+
+    .post-img {
+        margin-bottom: 30px;
+
+        img {
+            width: 100%
+        }
+    }
+
+    .post-desc {
+        .post-info {
+            @include flex-center-vert;
+            margin-bottom: 20px;
+
+            .date {
+                background-color: $lgreen;
+                height: 30px;
+                width: 165px;
+                @include flex-center;
+                margin-right: 15px;
+
+                h4 {
+                    color: white;
+                }
+            }
+
+            i {
+                margin-right: 10px;
+                color: $lightgray;
+                cursor: pointer;
+                transition: 0.5s;
+
+                &:hover {
+                    transform: scale(1.5);
+                }
+            }
+
+            i.fa-heart {
+                color: #ea6a6a;
+            }
+
+            span {
+                margin-right: 20px;
+            }
+        }
+
+        h3 {
+            margin-bottom: 20px;
+        }
+
+        p {
+            line-height: 25px;
+            margin-bottom: 30px;
+        }
+
+        a {
+            @include flex-center-vert;
+
+            h4 {
+                margin-right: 5px;
+                position: relative;
+
+                &:after {
+                    content: "";
+                    position: absolute;
+                    left: 0;
+                    bottom: -50%;
+                    height: 2px;
+                    background-color: $gray;
+                    width: 0;
+                    transition: all 0.2s ease-in-out;
+                }
+
+                &:hover:after {
+                    width: 50%;
+                }
+            }
+        }
+    }
+}
+
+.search-area {
+    height: 40px;
+    background-color: $lightgray;
+    @include flex-center-vert;
+
+    form {
+        @include flex-center-vert;
+        width: 100%;
+        padding: 0 15px;
+        justify-content: space-between;
+
+        .search-form {
+            outline: none;
+            border: none;
+            background-color: $lightgray;
+            font-size: 12px;
+            font-family: $fMont;
+            color: $gray;
+            font-weight: bold;
+            width: 80%;
+
+            &::placeholder {
+                font-weight: bold;
+                font-family: $fMont;
+                font-size: 12px;
+                color: $placehGray;
+                text-transform: uppercase;
+            }
+        }
+
+        .search-btn {
+            outline: none;
+            border: none;
+            background-color: $lightgray;
+            color: $placehGray;
+            cursor: pointer;
+        }
+    }
+}
+
+.widget {
+    margin-bottom: 50px;
+}
+
+.post-widget, .tags-widget {
+    .title {
+        margin-bottom: 30px;
+    }
+}
+
+.tabs {
+    nav {
+        @include flex-center-horiz;
+        flex-wrap: wrap;
+        text-align: center;
+
+        @include tablet {
+            justify-content: flex-start;
+        }
+
+        a {
+            padding: 0 10px 20px;
+            border-bottom: 2px solid $lightgray;
+            margin-bottom: 30px;
+
+            &.active {
+                border-bottom: 2px solid $lgreen;
+            }
+        }
+
+        h4 {
+            font-size: 12px;
+        }
+    }
+
+    [class*=tab-] {
+        .tab-post {
+            margin-bottom: 10px;
+            @include flex-center-vert;
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+            
+            .post-media {
+                max-width: 80px;
+                max-height: 80px;
+                margin-right: 15px;
+            }
+
+            .post-desc {
+                h4 {
+                    line-height: 20px;
+                }
+
+                p {
+                    font-size: 12px;
+                 }
+            }
+        }
+    }
+}
+
+.categories-widget, .archives-widget {
+    .title {
+        margin-bottom: 10px;
+    }
+}
+
+.widget-list {
+    li {
+        a {
+            @include flex-center-vert;
+            justify-content: space-between;
+            padding: 0 15px;
+            width: 100%;
+            height: 50px;
+            border-bottom: 1px solid $placehGray;
+            transition: 0.2s;
+
+            &:hover {
+                border-bottom: 1px solid $lgreen;
+            }
+        }
+    }
+}
+
+.tags-list {
+    display: flex;
+    flex-wrap: wrap;
+    li {
+        margin: 0 5px 5px 0;
+        a {
+            padding: 0 14px;
+            height: 30px;
+            background-color: $lightgray;
+            font-family: $fMont;
+            text-transform: uppercase;
+            font-size: 12px;
+            font-weight: bold;
+            line-height: 30px;
+            color: #999999;
+            transition: 0.3s;
+
+            &:hover {
+                background-color: $lgreen;
+                color: $gray;
+            }
         }
     }
 }
