@@ -754,6 +754,9 @@ h3 {
   font-size: 30px;
   line-height: 140%;
 }
+.categories .categories-items .categories-menu {
+  margin-bottom: 15px;
+}
 @media (max-width: 767px) {
   .categories .categories-items .categories-menu {
     display: flex;

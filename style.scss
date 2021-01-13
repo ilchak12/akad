@@ -426,7 +426,6 @@ h3 {
     @include flex-col-center;   
     position: relative;
 
-
     &:last-child {
         margin-bottom: 0;
         @include mobile {
@@ -504,6 +503,8 @@ h3 {
     }
 
     .categories-items .categories-menu {
+        margin-bottom: 15px;
+
         @include mobile {
             @include flex-center-horiz;
             flex-wrap: wrap;
@@ -1311,7 +1312,7 @@ h3 {
     .center-col-xs {
         padding: 0;
     }
-    
+
     form {
         margin-bottom: 100px;
 
