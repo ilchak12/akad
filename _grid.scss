@@ -78,14 +78,6 @@
         align-items: center;
     }
 
-    // .center-col-xs {
-    //     display: flex;
-    //     justify-content: center;
-    //     align-items: center;
-    //     text-align: center;
-    //     flex-direction: column;
-    // }
-
     .page {
         margin-top: 80px;
     }
@@ -109,6 +101,7 @@
         align-items: center;
         text-align: center;
         flex-direction: column;
+        padding: 0;
     }
 
     .page {
