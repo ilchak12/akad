@@ -66,17 +66,12 @@ h3 {
 
 .header {
     height: 100px;
-    display: flex;
-    align-items: center;
+    @include flex-center-vert;
 }
 
 .logo {
     position: relative;
     z-index: 5000;
-
-    a {
-        cursor: pointer; 
-    }
 }
 
 .nav-desktop {
@@ -155,7 +150,6 @@ h3 {
                 font-weight: 700;
                 text-transform: uppercase;
                 font-size: 14px;
-                position: relative;
 
                 &:hover {
                     color: $lgreen;
@@ -235,13 +229,6 @@ h3 {
             background-color: $lgreen;
             text-align: center;
             @include flex-center;
-
-            h3 {
-                font-size: 18px;
-                font-family: $fMont;
-                font-weight: bold;
-                text-transform: uppercase;
-            }
         }
 
         .big-title {
@@ -251,10 +238,7 @@ h3 {
             margin-bottom: 30px;
             
             h2 {
-                font-family: $fMont;
-                font-weight: bold;
                 font-size: 48px;
-                text-transform: uppercase;
             }
 
             @include mobile {
@@ -290,10 +274,6 @@ h3 {
     h2 {
         position: relative;
         z-index: 1;
-        font-family: $fMont;
-        font-size: 30px;
-        text-transform: uppercase;
-        font-weight: bold;
 
         &:after {
             content: "";
@@ -318,8 +298,7 @@ h3 {
 }
 
 .history-desc {
-    display: flex;
-    flex-direction: column;
+    @include flex-col;
 
     p {
         font-size: 16px;
@@ -392,10 +371,6 @@ h3 {
     .service-title {
         h3 {
             margin: 25px 0;
-            font-size: 18px;
-            font-family: $fMont;
-            font-weight: bold;
-            text-transform: uppercase;
         }
 
         @include mobile {
@@ -441,8 +416,7 @@ h3 {
     }
 
     &:hover .photo-desc {
-        visibility: visible;
-        opacity: 1;
+        @include show-elem;
         transform: scaleX(1);
         transition: 0.3s;
     }
@@ -464,10 +438,6 @@ h3 {
         transition: 0.3s;
 
         h3 {
-            font-size: 18px;
-            font-family: $fMont;
-            font-weight: bold;
-            text-transform: uppercase;
             margin-bottom: 10px;
             color: white;
         }
@@ -497,7 +467,6 @@ h3 {
         padding-bottom: 40px;
 
         h2 {
-            font-size: 30px;
             line-height: 140%;
         }
     }
@@ -568,11 +537,7 @@ h3 {
     }
 
     h2 {
-        font-family: $fMont;
-        font-size: 30px;
         color: white;
-        text-transform: uppercase;
-        font-weight: bold;
         line-height: 140%;
     }
 }
@@ -583,8 +548,6 @@ h3 {
 
     h3 {
         font-size: 24px;
-        text-transform: uppercase;
-        font-weight: bold;
         line-height: 130%;
     }
 
@@ -628,7 +591,6 @@ h3 {
 }
 
 .nav-footer {
-
     .footer-menu {
         display: flex;
         
@@ -1023,6 +985,7 @@ h3 {
             padding: 10px 20px;
             background-color: $lgreen;
             width: max-content;
+
             h4 {
                 color: white;
             }
@@ -1278,8 +1241,10 @@ h3 {
 .tags-list {
     display: flex;
     flex-wrap: wrap;
+
     li {
         margin: 0 5px 5px 0;
+
         a {
             padding: 0 14px;
             height: 30px;
@@ -1308,7 +1273,6 @@ h3 {
 
 /*Contact*/
 .contact-form {
-
     .center-col-xs {
         padding: 0;
     }
