@@ -37,9 +37,15 @@ for(let i = 0; i < tabItems.length; i++) {
 
 //likes
 let likes = document.querySelectorAll(".post-likes .fa-heart");
+let likesCount = document.querySelectorAll(".post-likes span");
 
-likes.forEach(el => {
-    el.addEventListener("click", function() {
-        el.classList.toggle("liked");
+for(let i = 0; i < likes.length; i++) {
+    likes[i].addEventListener("click", function() {
+        likes[i].classList.toggle("liked");
+        if(likes[i].classList.contains("liked")) {
+            likesCount[i].textContent = +likesCount[i].textContent + 1;
+        } else {
+            likesCount[i].textContent = +likesCount[i].textContent - 1;
+        }
     })
-})
+}
