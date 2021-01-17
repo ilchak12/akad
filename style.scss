@@ -107,9 +107,9 @@ h3 {
                 position: relative;
 
                 @include mobile {
-                    height: 30px;
-                    line-height: 30px;
-                    font-size: 16px;
+                    height: 50px;
+                    line-height: 50px;
+                    font-size: 24px;
                     background-color: $lightgray;
                     transition: all 0.2s ease-in-out;
                 }
@@ -159,7 +159,7 @@ h3 {
         top: 70px;
         right: 0;
         bottom: 0;
-        width: 300px;
+        width: 100%;
         height: max-content;
         transition: all 1s ease-in-out;
         transform: translateX(150%);
@@ -992,7 +992,7 @@ h3 {
 
     @include mobile {
         max-width: 340px;
-        margin: 0 auto;
+        margin: 0 auto 30px;
     }
 
     &:hover {
@@ -1076,6 +1076,12 @@ h3 {
                 }
             }
 
+            .post-likes {
+                i.liked {
+                    color: #ea6a6a;
+                }
+            }
+
             i {
                 margin-right: 10px;
                 color: $lightgray;
@@ -1085,10 +1091,10 @@ h3 {
                 &:hover {
                     transform: scale(1.5);
                 }
-            }
 
-            i.fa-heart {
-                color: #ea6a6a;
+                @include mobile {
+                    font-size: 20px;
+                }
             }
 
             span {

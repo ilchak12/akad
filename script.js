@@ -11,8 +11,14 @@ mobileMenu.addEventListener("click", function() {
     }
 })
 
-//tabs
+window.addEventListener("scroll", function() {
+    if(pageYOffset > 0) {
+        mainMenu.classList.remove("active-menu");
+        mobileMenu.classList.remove("active-menu");
+    }
+})
 
+//tabs
 let tabItems = document.querySelectorAll(".tab-title-item");
 let tabContent = document.querySelectorAll(".tab-content");
 
@@ -28,3 +34,12 @@ for(let i = 0; i < tabItems.length; i++) {
         tabContent[i].classList.add("active");
     })
 }
+
+//likes
+let likes = document.querySelectorAll(".post-likes .fa-heart");
+
+likes.forEach(el => {
+    el.addEventListener("click", function() {
+        el.classList.toggle("liked");
+    })
+})

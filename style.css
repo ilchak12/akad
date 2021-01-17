@@ -380,9 +380,9 @@ h3 {
 }
 @media (max-width: 767px) {
   .nav-desktop .menu li a {
-    height: 30px;
-    line-height: 30px;
-    font-size: 16px;
+    height: 50px;
+    line-height: 50px;
+    font-size: 24px;
     background-color: #e9e9e9;
     transition: all 0.2s ease-in-out;
   }
@@ -429,7 +429,7 @@ h3 {
     top: 70px;
     right: 0;
     bottom: 0;
-    width: 300px;
+    width: 100%;
     height: max-content;
     transition: all 1s ease-in-out;
     transform: translateX(150%);
@@ -1228,7 +1228,7 @@ h3 {
 @media (max-width: 767px) {
   .paid-plan {
     max-width: 340px;
-    margin: 0 auto;
+    margin: 0 auto 30px;
   }
 }
 .paid-plan:hover {
@@ -1305,6 +1305,9 @@ h3 {
 .blog-post .post-desc .post-info .date h4 {
   color: white;
 }
+.blog-post .post-desc .post-info .post-likes i.liked {
+  color: #ea6a6a;
+}
 .blog-post .post-desc .post-info i {
   margin-right: 10px;
   color: #e9e9e9;
@@ -1314,8 +1317,10 @@ h3 {
 .blog-post .post-desc .post-info i:hover {
   transform: scale(1.5);
 }
-.blog-post .post-desc .post-info i.fa-heart {
-  color: #ea6a6a;
+@media (max-width: 767px) {
+  .blog-post .post-desc .post-info i {
+    font-size: 20px;
+  }
 }
 .blog-post .post-desc .post-info span {
   margin-right: 20px;
