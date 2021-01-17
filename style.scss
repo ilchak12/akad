@@ -1182,7 +1182,7 @@ h3 {
 }
 
 .tabs {
-    nav {
+    .tab-title-items {
         @include flex-center-horiz;
         flex-wrap: wrap;
         text-align: center;
@@ -1191,13 +1191,18 @@ h3 {
             justify-content: flex-start;
         }
 
-        a {
+        .tab-title-item {
             padding: 0 10px 20px;
             border-bottom: 2px solid $lightgray;
             margin-bottom: 30px;
 
             &.active {
                 border-bottom: 2px solid $lgreen;
+                transition: all 0.2s ease-in-out;
+            }
+
+            &:hover {
+                cursor: pointer;
             }
         }
 
@@ -1206,29 +1211,37 @@ h3 {
         }
     }
 
-    [class*=tab-] {
-        .tab-post {
-            margin-bottom: 10px;
-            @include flex-center-vert;
+    .tab-content-items {
+        .tab-content {
+            display: none;
 
-            &:last-child {
-                margin-bottom: 0;
-            }
-            
-            .post-media {
-                max-width: 80px;
-                max-height: 80px;
-                margin-right: 15px;
+            &.active {
+                display: block;
             }
 
-            .post-desc {
-                h4 {
-                    line-height: 20px;
+            .tab-post {
+                margin-bottom: 10px;
+                @include flex-center-vert;
+    
+                &:last-child {
+                    margin-bottom: 0;
                 }
-
-                p {
-                    font-size: 12px;
-                 }
+                
+                .post-media {
+                    max-width: 80px;
+                    max-height: 80px;
+                    margin-right: 15px;
+                }
+    
+                .post-desc {
+                    h4 {
+                        line-height: 20px;
+                    }
+    
+                    p {
+                        font-size: 12px;
+                     }
+                }
             }
         }
     }

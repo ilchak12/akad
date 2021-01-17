@@ -1395,45 +1395,55 @@ h3 {
   margin-bottom: 30px;
 }
 
-.tabs nav {
+.tabs .tab-title-items {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
   text-align: center;
 }
 @media (min-width: 768px) and (max-width: 991px) {
-  .tabs nav {
+  .tabs .tab-title-items {
     justify-content: flex-start;
   }
 }
-.tabs nav a {
+.tabs .tab-title-items .tab-title-item {
   padding: 0 10px 20px;
   border-bottom: 2px solid #e9e9e9;
   margin-bottom: 30px;
 }
-.tabs nav a.active {
+.tabs .tab-title-items .tab-title-item.active {
   border-bottom: 2px solid #7beec7;
+  transition: all 0.2s ease-in-out;
 }
-.tabs nav h4 {
+.tabs .tab-title-items .tab-title-item:hover {
+  cursor: pointer;
+}
+.tabs .tab-title-items h4 {
   font-size: 12px;
 }
-.tabs [class*=tab-] .tab-post {
+.tabs .tab-content-items .tab-content {
+  display: none;
+}
+.tabs .tab-content-items .tab-content.active {
+  display: block;
+}
+.tabs .tab-content-items .tab-content .tab-post {
   margin-bottom: 10px;
   display: flex;
   align-items: center;
 }
-.tabs [class*=tab-] .tab-post:last-child {
+.tabs .tab-content-items .tab-content .tab-post:last-child {
   margin-bottom: 0;
 }
-.tabs [class*=tab-] .tab-post .post-media {
+.tabs .tab-content-items .tab-content .tab-post .post-media {
   max-width: 80px;
   max-height: 80px;
   margin-right: 15px;
 }
-.tabs [class*=tab-] .tab-post .post-desc h4 {
+.tabs .tab-content-items .tab-content .tab-post .post-desc h4 {
   line-height: 20px;
 }
-.tabs [class*=tab-] .tab-post .post-desc p {
+.tabs .tab-content-items .tab-content .tab-post .post-desc p {
   font-size: 12px;
 }
 
