@@ -46,6 +46,14 @@ $placehGray: #a6a6ad;
     opacity: 1;
 }
 
+@mixin hide-flex {
+    display: none;
+}
+
+@mixin show-flex {
+    display: flex;
+}
+
 @mixin tablet {
     @media (min-width: 768px) and (max-width: 991px) {
         @content;

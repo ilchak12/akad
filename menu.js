@@ -1,28 +1,12 @@
-let burgerMenu = document.getElementById("xs-icon");
-let navMobile = document.getElementById("xs-menu");
-let lines = document.querySelectorAll(".line");
+//menu mobile
+let mobileMenu = document.querySelector(".menu-burger");
+let mainMenu = document.querySelector(".menu");
 
-navMobile.style.visibility = "hidden";
-navMobile.style.opacity = "0";    
-navMobile.style.transform = "scaleY(0)";
-lines[0].style.width = "30px";
-lines[1].style.width = "15px";
-lines[2].style.width = "20px";
-
-burgerMenu.addEventListener("click", function() {
-    if(navMobile.style.visibility == "hidden" && navMobile.style.opacity == "0") {
-        navMobile.style.visibility = "visible";
-        navMobile.style.opacity = "1";
-        navMobile.style.transform = "scaleY(1)";
-        lines.forEach(el => {
-            el.style.width = "30px";
-        });
+mobileMenu.addEventListener("click", function() {
+    mobileMenu.classList.toggle("active-menu");
+    if(mobileMenu.classList.contains("active-menu")) {
+        mainMenu.classList.add("active-menu");
     } else {
-        navMobile.style.visibility = "hidden";
-        navMobile.style.opacity = "0";    
-        navMobile.style.transform = "scaleY(0)";
-        lines[0].style.width = "30px";
-        lines[1].style.width = "15px";
-        lines[2].style.width = "20px";  
+        mainMenu.classList.remove("active-menu");
     }
 })

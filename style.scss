@@ -78,19 +78,22 @@ h3 {
     position: relative;
     z-index: 5000;
 
-    @include mobile {
-        @include hide-elem;
-    }
-
-    @include tablet {
-        @include hide-elem;
-    }
-
     .menu {
         display: flex;
+
+        @include mobile {
+            display: block;
+            text-align: center;
+            padding: 15px 0;
+            background-color: $lightgray;
+        }
     
         li {
             margin-right: 20px;
+
+            @include mobile {
+                margin-right: 0;
+            }
 
             &:last-child {
                 margin-right: 0;
@@ -103,6 +106,14 @@ h3 {
                 font-size: 12px;
                 position: relative;
 
+                @include mobile {
+                    height: 30px;
+                    line-height: 30px;
+                    font-size: 16px;
+                    background-color: $lightgray;
+                    transition: all 0.2s ease-in-out;
+                }
+
                 &:after {
                     content: "";
                     position: absolute;
@@ -112,10 +123,18 @@ h3 {
                     height: 1px;
                     background-color: $gray;
                     transition: all 0.2s ease-in-out;
+
+                    @include mobile {
+                        content: none;
+                    }
                 }
 
                 &:hover {
                     color: $lgreen;
+
+                    @include mobile {
+                        background-color: $gray;
+                    }
                 }
 
                 &:hover:after {
@@ -127,79 +146,80 @@ h3 {
     }
 }
 
-.nav-mobile {
-    position: absolute;
-    z-index: 5000;
-    top: 30px;
-    right: 0;
-    @include hide-elem;
-    transition: 0.3s;
-    transform-origin: 0 0;
+/*Mobile menu*/
+.hidden-menu {
+    @include mobile {
+        @include hide-elem;
+    }
+}
 
-    .menu-mobile {
-    
-        li {
-            a {
-                padding: 0 10px;
-                background-color: $lightgray;
-                width: 150px;
-                height: 40px;
-                line-height: 40px;
-                text-align: right;
-                font-family: $fMont;
-                font-weight: 700;
-                text-transform: uppercase;
-                font-size: 14px;
+.navigation {
+    @include mobile {
+        position: fixed;
+        top: 70px;
+        right: 0;
+        bottom: 0;
+        width: 300px;
+        height: max-content;
+        transition: all 1s ease-in-out;
+        transform: translateX(150%);
+    }
 
-                &:hover {
-                    color: $lgreen;
-                    background-color: $gray;
-                }
-            }
+    &.active-menu {
+        @include mobile {
+            @include show-elem;
+            transform: translateX(0);
+            display: block;
+            text-align: center;
+            top: 70px;
         }
     }
 }
 
 .menu-burger {
-    position: relative;
-}
-
-.menu-icon {
-    position: relative;
-    z-index: 5000;
-    max-width: 30px;
-    height: 17px;
-    @include flex-col;
-    justify-content: space-between;
-    cursor: pointer;
-    @include hide-elem;
-
-    @include mobile {
-        @include show-elem;
+    &.active-menu .line:nth-child(n) {
+        @include mobile {
+            width: 30px;
+        }
     }
 
-    @include tablet {
-        @include show-elem;
+    @include mobile {
+        position: relative;
+        z-index: 5000;
+        cursor: pointer;
+        max-width: 30px;
+        height: 17px;
+        @include flex-col;
+        justify-content: space-between;
     }
 
     .line {
-        height: 1px;
-        background-color: $gray;
-        transition: all 0.3s ease-in-out;
+        @include mobile {
+            height: 1px;
+            background-color: $gray;
+            transition: all 0.3s ease-in-out;
+        }
 
-        &:first-child {
-            width: 30px;
+        &:nth-child(1) {
+            @include mobile {
+                width: 30px;
+            }
         }
 
         &:nth-child(2) {
-            width: 15px;
+            @include mobile {
+                width: 15px;
+            }
         }
 
-        &:last-child {
-            width: 20px;
+        &:nth-child(3) {
+            @include mobile {
+                width: 20px;
+            }
         }
     }
 }
+/*Mobile menu*/
 
 /*SLIDER*/
 
