@@ -354,7 +354,10 @@ h3 {
 }
 @media (max-width: 767px) {
   .nav-desktop .menu {
-    display: block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
     text-align: center;
     padding: 15px 0;
     background-color: #e9e9e9;
@@ -366,6 +369,7 @@ h3 {
 @media (max-width: 767px) {
   .nav-desktop .menu li {
     margin-right: 0;
+    width: 100%;
   }
 }
 .nav-desktop .menu li:last-child {
@@ -380,11 +384,12 @@ h3 {
 }
 @media (max-width: 767px) {
   .nav-desktop .menu li a {
-    height: 50px;
-    line-height: 50px;
-    font-size: 24px;
+    height: 70px;
+    line-height: 70px;
+    font-size: 30px;
     background-color: #e9e9e9;
     transition: all 0.2s ease-in-out;
+    width: 100%;
   }
 }
 .nav-desktop .menu li a:after {
@@ -426,11 +431,11 @@ h3 {
 @media (max-width: 767px) {
   .navigation {
     position: fixed;
-    top: 70px;
+    top: 0;
     right: 0;
     bottom: 0;
     width: 100%;
-    height: max-content;
+    height: 100%;
     transition: all 1s ease-in-out;
     transform: translateX(150%);
   }
@@ -440,9 +445,12 @@ h3 {
     visibility: visible;
     opacity: 1;
     transform: translateX(0);
-    display: block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
     text-align: center;
-    top: 70px;
+    top: 0;
   }
 }
 
