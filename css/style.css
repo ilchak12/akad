@@ -511,16 +511,28 @@ h3 {
   justify-content: center;
   height: 550px;
   margin-top: 50px;
+  width: 100%;
 }
-.slides .slide-1 {
+.slides > div {
+  width: 100%;
+}
+.slides .slick-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 550px;
+  border: none;
+  outline: none;
+}
+.slides .slide-content {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  width: max-content;
+  width: 100%;
   text-align: center;
 }
-.slides .slide-1 .small-title {
+.slides .slide-content .small-title {
   width: 100px;
   height: 30px;
   background-color: #7beec7;
@@ -529,21 +541,22 @@ h3 {
   justify-content: center;
   align-items: center;
 }
-.slides .slide-1 .big-title {
+.slides .slide-content .big-title {
   width: 100%;
   border: 10px solid #60606e;
-  padding: 15px 40px;
+  padding: 15px 0;
   margin-bottom: 30px;
+  text-align: center;
 }
-.slides .slide-1 .big-title h2 {
+.slides .slide-content .big-title h2 {
   font-size: 48px;
 }
 @media (max-width: 767px) {
-  .slides .slide-1 .big-title {
-    padding: 15px 25px;
+  .slides .slide-content .big-title h2 {
+    font-size: 36px;
   }
 }
-.slides .slide-1 p {
+.slides .slide-content p {
   width: 100%;
   font-size: 16px;
 }

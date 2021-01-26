@@ -239,10 +239,22 @@ h3 {
     @include flex-center-horiz;
     height: 550px;
     margin-top: 50px;
+    width: 100%;
 
-    .slide-1 {
+    & > div {
+        width: 100%;
+    }
+
+    .slick-slide {
+        @include flex-center;
+        height: 550px;
+        border: none;
+        outline: none;
+    }
+
+    .slide-content {
         @include flex-col-center;
-        width: max-content;
+        width: 100%;
         text-align: center;
 
         .small-title {
@@ -256,15 +268,16 @@ h3 {
         .big-title {
             width: 100%;
             border: 10px solid $gray;
-            padding: 15px 40px;
+            padding: 15px 0;
             margin-bottom: 30px;
+            text-align: center;
             
             h2 {
                 font-size: 48px;
-            }
 
-            @include mobile {
-                padding: 15px 25px;
+                @include mobile {
+                    font-size: 36px;
+                }
             }
         }
 

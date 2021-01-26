@@ -49,3 +49,13 @@ for(let i = 0; i < likes.length; i++) {
         }
     })
 }
+
+//slider
+$(".slides").slick({
+    fade: true,
+    speed: 500,
+    cssEase: 'linear',
+    autoplay: true,
+    autoplaySpeed: 2000,
+    arrows: false,
+});
