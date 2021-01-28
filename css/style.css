@@ -225,6 +225,11 @@
     align-items: center;
   }
 
+  .flex-center-horiz-sm-xs {
+    display: flex;
+    justify-content: center;
+  }
+
   .page {
     margin-top: 80px;
   }
@@ -258,6 +263,11 @@
     text-align: center;
     flex-direction: column;
     padding: 0;
+  }
+
+  .flex-center-horiz-sm-xs {
+    display: flex;
+    justify-content: center;
   }
 
   .page {
@@ -699,6 +709,13 @@ h3 {
 }
 
 /*PORTFOLIO*/
+.portfolio .tab-content {
+  display: none;
+}
+.portfolio .tab-content.active {
+  display: flex;
+}
+
 .photo {
   margin-bottom: 30px;
   display: flex;
@@ -793,6 +810,7 @@ h3 {
   margin-left: 20px;
   width: max-content;
   transition: 0.2s;
+  cursor: pointer;
 }
 @media (min-width: 768px) and (max-width: 991px) {
   .categories .categories-items .categories-menu li {
@@ -1447,12 +1465,6 @@ h3 {
 .tabs .tab-title-items h4 {
   font-size: 12px;
 }
-.tabs .tab-content-items .tab-content {
-  display: none;
-}
-.tabs .tab-content-items .tab-content.active {
-  display: block;
-}
 .tabs .tab-content-items .tab-content .tab-post {
   margin-bottom: 10px;
   display: flex;
@@ -1471,6 +1483,13 @@ h3 {
 }
 .tabs .tab-content-items .tab-content .tab-post .post-desc p {
   font-size: 12px;
+}
+
+.tab-content {
+  display: none;
+}
+.tab-content.active {
+  display: block;
 }
 
 .categories-widget .title, .archives-widget .title {

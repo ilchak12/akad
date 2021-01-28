@@ -68,6 +68,11 @@
         align-items: center;
     }
 
+    .flex-center-horiz-sm-xs {
+        display: flex;
+        justify-content: center;
+    }
+
     .page {
         margin-top: 80px;
     }
@@ -102,6 +107,11 @@
         text-align: center;
         flex-direction: column;
         padding: 0;
+    }
+
+    .flex-center-horiz-sm-xs {
+        display: flex;
+        justify-content: center;
     }
 
     .page {

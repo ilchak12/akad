@@ -431,6 +431,16 @@ h3 {
 
 /*PORTFOLIO*/
 
+.portfolio {
+    .tab-content {
+        display: none;
+    
+        &.active {
+            display: flex;
+        }
+    }
+}
+
 .photo {
     margin-bottom: 30px;
     @include flex-col-center;   
@@ -525,6 +535,7 @@ h3 {
             margin-left: 20px;
             width: max-content;
             transition: 0.2s;
+            cursor: pointer;
             
             @include tablet {
                 margin: 0 10px 0 0;
@@ -1234,12 +1245,6 @@ h3 {
 
     .tab-content-items {
         .tab-content {
-            display: none;
-
-            &.active {
-                display: block;
-            }
-
             .tab-post {
                 margin-bottom: 10px;
                 @include flex-center-vert;
@@ -1265,6 +1270,14 @@ h3 {
                 }
             }
         }
+    }
+}
+
+.tab-content {
+    display: none;
+
+    &.active {
+        display: block;
     }
 }
 
